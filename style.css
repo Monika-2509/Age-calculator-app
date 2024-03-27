@@ -1,0 +1,113 @@
+@font-face {
+  font-family: pop;
+  src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+* {
+  font-family: pop !important;
+}
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+}
+body {
+  background-color: var(--Offwhite);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container {
+  background-color: var(--White);
+  width: 420px;
+  max-width: 80%;
+  padding: 30px;
+  position: relative;
+  border-bottom-right-radius: 150px;
+}
+input {
+  width: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--Offwhite);
+  outline: none;
+}
+input:focus {
+  border: 2px solid var(--purple);
+}
+.input-section {
+  display: flex;
+  border-bottom: 2px solid var(--Offwhite);
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.input-header {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+small {
+  font-size: 0.6rem;
+  color: var(--Lightred);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.calculate-btn {
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purple);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 7%;
+  top: 22%;
+  cursor: pointer;
+}
+.calculate-btn:hover {
+  background-color: black;
+}
+.output-section span {
+  font-size: 2.5rem;
+  color: var(--purple);
+  font-style: italic;
+  margin-right: 5px;
+}
+@media (max-width: 700px) {
+  input {
+    width: 80%;
+  }
+  .output-section span {
+    font-size: 1.75rem;
+  }
+  .calculate-btn {
+    width: 40px;
+    height: 40px;
+    top: 32%;
+    right: 40px;
+  }
+  .calculate-btn img {
+    transform: scale(0.5);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 0px;
+  color: var(--Smokeygrey);
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--Lightred);
+}
